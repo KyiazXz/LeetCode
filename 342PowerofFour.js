@@ -10,3 +10,16 @@
 // Output: true
 
 // solution
+var isPowerOfFour = function(n) {
+    let k = 1
+    function is(k , n){
+        if (k === n){
+            return true
+        }
+        if (k>n){
+            return false
+        }
+        return is (k*4 , n)
+    }
+    return is(1 , n)
+};
